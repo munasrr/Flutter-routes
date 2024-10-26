@@ -1,18 +1,26 @@
 import 'package:flutter/material.dart';
 
 class SecondScreen extends StatelessWidget {
-  const SecondScreen({super.key});
+  final String imageUrl;
+
+  const SecondScreen({super.key, required this.imageUrl});
 
   @override
   Widget build(BuildContext context) {
     return Scaffold(
       appBar: AppBar(
-        title: const Text("Second Screen"),
-        foregroundColor: const Color(0x00000384),
-        centerTitle: true,
+        title: const Text('Screen 2'),
       ),
-      body: const Center(
-        child: Text("Welcome to the Second Screen!"),
+      body: Center(
+        child: Padding(
+          padding: const EdgeInsets.all(16.0),
+          child: Image.network(
+            imageUrl, // Display the image passed from ImageViewerApp
+            width: double.infinity,
+            height: 250, // Increased height for better visibility
+            fit: BoxFit.contain, // Ensures the image fits within the screen without cropping
+          ),
+        ),
       ),
     );
   }
