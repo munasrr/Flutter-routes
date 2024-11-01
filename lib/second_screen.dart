@@ -15,10 +15,10 @@ class SecondScreen extends StatelessWidget {
         child: Padding(
           padding: const EdgeInsets.all(16.0),
           child: Image.network(
-            imageUrl, // Display the image passed from ImageViewerApp
+            imageUrl, 
             width: double.infinity,
-            height: 250, // Increased height for better visibility
-            fit: BoxFit.contain, // Ensures the image fits within the screen without cropping
+            height: 250, 
+            fit: BoxFit.contain, 
           ),
         ),
       ),

@@ -11,7 +11,7 @@ class MyApp extends StatelessWidget {
     return MaterialApp(
       theme: ThemeData(
         appBarTheme: AppBarTheme(
-          backgroundColor: Colors.blue[900],
+          backgroundColor: Colors.blue[800],
           foregroundColor: Colors.white, // AppBar color
         ),
       ),
@@ -62,7 +62,7 @@ class _ImageViewerAppState extends State<ImageViewerApp> {
               _displayedImageUrl,
               width: double.infinity,
               height: 170,
-              fit: BoxFit.contain, // Ensures the image fits within the container
+              fit: BoxFit.contain, 
             ),
           ),
 
